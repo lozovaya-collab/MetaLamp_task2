@@ -1,0 +1,4 @@
+@import "~normalize.css";
+* {
+    background-color: rgb(238, 238, 129);
+}
