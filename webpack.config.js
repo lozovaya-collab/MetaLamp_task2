@@ -5,7 +5,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
-    // const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
@@ -89,8 +88,8 @@ const plugins = () => {
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [{
-                from: path.resolve(__dirname, 'src/favicon.ico'), // фавиконка
-                to: path.resolve(__dirname, 'dist')
+                from: './assets',
+                to: './assets'
             }]
         }),
         new MiniCssExtractPlugin({
@@ -98,9 +97,9 @@ const plugins = () => {
         })
     ]
 
-    if (isProd) {
-        base.push(new BundleAnalyzerPlugin())
-    }
+    // if (isProd) {
+    //     base.push(new BundleAnalyzerPlugin())
+    // }
 
     return base
 }
@@ -108,12 +107,8 @@ const plugins = () => {
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    // entry: {
-    //     main: ['@babel/polyfill', './index.jsx'],
-    //     analytics: './analytics.ts'
-    // },
     entry: {
-        main: './src/index.js'
+        main: './index.js'
     },
     output: {
         filename: filename('js'),
@@ -152,27 +147,11 @@ module.exports = {
                 use: ['file-loader']
             },
 
-            //         {
-            //             test: /\.js$/,
-            //             exclude: /node_modules/,
-            //             use: jsLoaders()
-            //         },
-            //         {
-            //             test: /\.ts$/,
-            //             exclude: /node_modules/,
-            //             loader: {
-            //                 loader: 'babel-loader',
-            //                 options: babelOptions('@babel/preset-typescript')
-            //             }
-            //         },
-            //         {
-            //             test: /\.jsx$/,
-            //             exclude: /node_modules/,
-            //             loader: {
-            //                 loader: 'babel-loader',
-            //                 options: babelOptions('@babel/preset-react')
-            //             }
-            //         }
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: jsLoaders()
+            }
         ]
     }
 }
