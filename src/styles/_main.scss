@@ -1,0 +1,26 @@
+@import './varibales';
+@import './fonts';
+@import './mixins';
+* {
+    margin: 0;
+}
+
+.wrapper {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 106px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_icon {
+        width: 40px;
+        height: 40px;
+    }
+    &_text {
+        width: 53px;
+        height: 13px;
+    }
+}

@@ -1,8 +1,26 @@
 doctype html
 html
-  head
-    
+  head   
   body
-    h1 My Site
-    p Welcome to my super lame site.
-    script
+    header.header
+      section.wrapper
+        div.logo
+          img(src="../../assets/icons/logo.svg" alt="logo: icon" class="logo_icon")
+          img(src="../../assets/icons/TOXIN.svg", alt="logo: text" class="logo_text")
+        nav.header_menu
+          ul.header_menu__list
+            li.header_menu__list_item 
+              a 
+                b О нас
+            li.header_menu__list_item 
+              a Услуги 
+              button.arrow-button
+            li.header_menu__list_item 
+              a Вакансии
+            li.header_menu__list_item 
+              a Новости
+            li.header_menu__list_item 
+              a Соглашения 
+              button.arrow-button
+          button.header_menu__button-LogIn
+          button.header_menu__button-SignUp

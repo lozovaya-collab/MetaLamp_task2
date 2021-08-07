@@ -85,13 +85,6 @@ const jsLoaders = () => {
 
 const plugins = () => {
     const base = [
-
-        // new HTMLWebpackPlugin({
-        //     template: './index.html',
-        //     minify: {
-        //         collapseWhitespace: isProd
-        //     }
-        // }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [{
@@ -110,10 +103,6 @@ const plugins = () => {
             }
         }))
     ]
-
-    // if (isProd) {
-    //     base.push(new BundleAnalyzerPlugin())
-    // }
 
     return base
 }
