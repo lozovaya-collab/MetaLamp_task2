@@ -112,9 +112,5 @@
   border-radius: 22px;
   background: none;
   outline: none;
-  border-width: 2px;
-  border-style: solid;
-  border-image-source: linear-gradient(to left, #BC9CFF 0%, #8BA4F9 100%);
-  border-image-slice: 1;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -41,10 +41,10 @@
                     width: 87px;
                     height: 34px;
                     @include button;
-                    border-width: 2px;
-                    border-style: solid;
-                    border-image-source: linear-gradient(to left, #BC9CFF 0%, #8BA4F9 100%);
-                    border-image-slice: 1;
+                    // border-width: 2px;
+                    // border-style: solid;
+                    // border-image-source: linear-gradient(to left, #BC9CFF 0%, #8BA4F9 100%);
+                    // border-image-slice: 1;
                 }
             }
         }
