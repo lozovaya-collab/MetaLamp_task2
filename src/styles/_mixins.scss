@@ -36,6 +36,8 @@
 
 @mixin button {
     border-radius: $button-radius;
+    border: none;
     background: none;
     outline: none;
+    cursor: pointer;
 }

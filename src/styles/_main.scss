@@ -24,3 +24,12 @@
         height: 13px;
     }
 }
+
+.arrow-button {
+    width: 24px;
+    height: 21px;
+    @include button;
+    padding: 0;
+    transform: rotate(-90deg);
+    color: $color-DarkShade50;
+}
