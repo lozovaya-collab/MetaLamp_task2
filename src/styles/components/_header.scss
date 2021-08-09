@@ -1,51 +1,92 @@
-    .header {
-        width: 100%;
-        height: 70px;
-        background-color: $color-White;
-        box-shadow: $shadow-header;
-        & .wrapper {
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: $color-White;
+    box-shadow: $shadow-header;
+    & .wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_menu {
+        width: 770px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        &__list {
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-        }
-        &_menu {
-            width: 770px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            &__list {
-                width: 447px;
-                height: 100%;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            &_item {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-                &_item {
-                    & a {
-                        color: $color-DarkShade50;
-                        text-decoration: none;
-                        cursor: pointer;
-                        @include Body;
-                        & b {
-                            color: $color-DarkShade75;
-                        }
+                height: 21px;
+                margin-right: 20px;
+                & a {
+                    @include Body;
+                    color: $color-DarkShade50;
+                    text-decoration: none;
+                    cursor: pointer;
+                    & b {
+                        color: $color-DarkShade75;
                     }
                 }
             }
-            &__button {
-                &-LogIn {
-                    width: 87px;
-                    height: 34px;
-                    @include button;
-                    // border-width: 2px;
-                    // border-style: solid;
-                    // border-image-source: linear-gradient(to left, #BC9CFF 0%, #8BA4F9 100%);
-                    // border-image-slice: 1;
+        }
+        &__button {
+            &-LogIn {
+                @include button;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 87px;
+                height: 34px;
+                margin-right: 20px;
+                background: linear-gradient(180deg, $color-Purple 0%, $color-lightViolet 100%);
+                & span {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 82px;
+                    height: 29px;
+                    border-radius: $button-radius;
+                    background-color: $color-White;
+                    @include h3;
+                    color: $color-Purple;
+                }
+            }
+            &-SignUp {
+                display: block;
+                width: 196px;
+                height: 34px;
+                @include button;
+                background: linear-gradient(180deg, $color-Purple 0%, $color-lightViolet 100%);
+                & span {
+                    border-radius: $button-radius;
+                    @include h3;
+                    color: $color-White;
                 }
             }
         }
+        &__separator {
+            display: none;
+            width: 1px;
+            height: 30px;
+            background-color: $color-DarkShade10;
+            margin-right: 20px;
+        }
+        &__userName {
+            display: none;
+            @include Body;
+            color: $color-DarkShade50;
+        }
     }
+}

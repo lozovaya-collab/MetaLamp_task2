@@ -40,6 +40,20 @@
   height: 13px;
 }
 
+.arrow-button {
+  width: 24px;
+  height: 21px;
+  border-radius: 22px;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: rgba(31, 32, 65, 0.5);
+}
+
 .header {
   width: 100%;
   height: 70px;
@@ -70,13 +84,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .header_menu__list {
-  width: 447px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,14 +105,25 @@
   margin: 0;
 }
 
+.header_menu__list_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 21px;
+  margin-right: 20px;
+}
+
 .header_menu__list_item a {
-  color: rgba(31, 32, 65, 0.5);
-  text-decoration: none;
-  cursor: pointer;
   font-family: "Montserrat-Regular";
   font-size: 14px;
   color: rgba(31, 32, 65, 0.75);
   line-height: 17px;
+  color: rgba(31, 32, 65, 0.5);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .header_menu__list_item a b {
@@ -107,10 +131,86 @@
 }
 
 .header_menu__button-LogIn {
-  width: 87px;
-  height: 34px;
   border-radius: 22px;
+  border: none;
   background: none;
   outline: none;
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 87px;
+  height: 34px;
+  margin-right: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.header_menu__button-LogIn span {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 82px;
+  height: 29px;
+  border-radius: 22px;
+  background-color: #FFF;
+  font-family: "Montserrat-Bold";
+  font-size: 12px;
+  color: #1F2041;
+  line-height: 15px;
+  color: #BC9CFF;
+}
+
+.header_menu__button-SignUp {
+  display: block;
+  width: 196px;
+  height: 34px;
+  border-radius: 22px;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.header_menu__button-SignUp span {
+  border-radius: 22px;
+  font-family: "Montserrat-Bold";
+  font-size: 12px;
+  color: #1F2041;
+  line-height: 15px;
+  color: #FFF;
+}
+
+.header_menu__separator {
+  display: none;
+  width: 1px;
+  height: 30px;
+  background-color: rgba(31, 32, 65, 0.1);
+  margin-right: 20px;
+}
+
+.header_menu__userName {
+  display: none;
+  font-family: "Montserrat-Regular";
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.5);
 }
 /*# sourceMappingURL=styles.css.map */
